@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AEE6AFB518BC3DF3005B98B6"
-               BuildableName = "ViewSample.app"
-               BlueprintName = "ViewSample"
-               ReferencedContainer = "container:ViewSample.xcodeproj">
+               BuildableName = "UIView_from_Xib.app"
+               BlueprintName = "UIView_from_Xib"
+               ReferencedContainer = "container:UIView_from_Xib.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AEE6AFD918BC3DF4005B98B6"
-               BuildableName = "ViewSampleTests.xctest"
-               BlueprintName = "ViewSampleTests"
-               ReferencedContainer = "container:ViewSample.xcodeproj">
+               BuildableName = "UIView_from_XibTests.xctest"
+               BlueprintName = "UIView_from_XibTests"
+               ReferencedContainer = "container:UIView_from_Xib.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AEE6AFB518BC3DF3005B98B6"
-            BuildableName = "ViewSample.app"
-            BlueprintName = "ViewSample"
-            ReferencedContainer = "container:ViewSample.xcodeproj">
+            BuildableName = "UIView_from_Xib.app"
+            BlueprintName = "UIView_from_Xib"
+            ReferencedContainer = "container:UIView_from_Xib.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AEE6AFB518BC3DF3005B98B6"
-            BuildableName = "ViewSample.app"
-            BlueprintName = "ViewSample"
-            ReferencedContainer = "container:ViewSample.xcodeproj">
+            BuildableName = "UIView_from_Xib.app"
+            BlueprintName = "UIView_from_Xib"
+            ReferencedContainer = "container:UIView_from_Xib.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AEE6AFB518BC3DF3005B98B6"
-            BuildableName = "ViewSample.app"
-            BlueprintName = "ViewSample"
-            ReferencedContainer = "container:ViewSample.xcodeproj">
+            BuildableName = "UIView_from_Xib.app"
+            BlueprintName = "UIView_from_Xib"
+            ReferencedContainer = "container:UIView_from_Xib.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
