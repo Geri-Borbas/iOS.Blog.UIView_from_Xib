@@ -1,5 +1,5 @@
 //
-//  EPPZViewController.h
+//  EPPZSubclassedView.h
 //  UIView_from_Xib
 //
 //  Created by Borbás Geri on 2/25/14.
@@ -15,5 +15,12 @@
 #import <UIKit/UIKit.h>
 
 
-@interface EPPZViewController : UIViewController
+@class EPPZSubclassedView;
+@interface EPPZSubclassedViewOwner : NSObject
+@property (nonatomic, weak) IBOutlet EPPZSubclassedView *subclassedView;
+@end
+
+@interface EPPZSubclassedView : UIView
++(void)presentInViewController:(UIViewController*) viewController;
+-(IBAction)dismiss;
 @end

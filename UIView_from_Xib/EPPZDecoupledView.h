@@ -1,5 +1,5 @@
 //
-//  EPPZViewController.h
+//  EPPZDecoupledView.h
 //  UIView_from_Xib
 //
 //  Created by Borbás Geri on 2/25/14.
@@ -15,5 +15,15 @@
 #import <UIKit/UIKit.h>
 
 
-@interface EPPZViewController : UIViewController
+@class EPPZDecoupledView;
+@protocol EPPZDecoupledViewDelegate
+-(void)decoupledViewTouchedUp:(EPPZDecoupledView*) decoupledView;
+-(void)decoupledViewDidDismiss:(EPPZDecoupledView*) decoupledView;
+@end
+
+@interface EPPZDecoupledView : UIView
+// Indicate that this view should be presented only controllers those implements the delegate methods.
++(void)presentInViewController:(UIViewController<EPPZDecoupledViewDelegate>*) viewController;
+-(IBAction)viewTouchedUp;
+-(IBAction)dismiss;
 @end

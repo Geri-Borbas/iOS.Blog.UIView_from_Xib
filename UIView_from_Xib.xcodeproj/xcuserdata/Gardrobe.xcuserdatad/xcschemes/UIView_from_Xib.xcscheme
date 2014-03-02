@@ -38,6 +38,16 @@
                ReferencedContainer = "container:UIView_from_Xib.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AE5C4AAA18C3C48100FB2F67"
+               BuildableName = "UIView_from_XibTests copy.xctest"
+               BlueprintName = "UIView_from_XibTests copy"
+               ReferencedContainer = "container:UIView_from_Xib.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

@@ -1,5 +1,5 @@
 //
-//  EPPZViewController.h
+//  EPPZDecoupledView.m
 //  UIView_from_Xib
 //
 //  Created by Borbás Geri on 2/25/14.
@@ -12,8 +12,47 @@
 //  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import "EPPZDecoupledView.h"
 
 
-@interface EPPZViewController : UIViewController
+@interface EPPZDecoupledViewOwner : NSObject
+@property (nonatomic, weak) IBOutlet EPPZDecoupledView *decoupledView;
+@end
+
+@implementation EPPZDecoupledViewOwner
+@end
+
+@interface EPPZDecoupledView ()
+@property (nonatomic, weak) UIViewController <EPPZDecoupledViewDelegate> *delegateViewController;
+@end
+
+@implementation EPPZDecoupledView
+
++(void)presentInViewController:(UIViewController<EPPZDecoupledViewDelegate>*) viewController
+{
+    // Instantiating encapsulated here.
+    EPPZDecoupledViewOwner *owner = [EPPZDecoupledViewOwner new];
+    [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:owner options:nil];
+    
+    // Pass in a reference of the viewController.
+    owner.decoupledView.delegateViewController = viewController;
+    
+    // Add (thus retain).
+    [viewController.view addSubview:owner.decoupledView];
+}
+
+-(IBAction)viewTouchedUp
+{
+    // Forward to delegate.
+    [self.delegateViewController decoupledViewTouchedUp:self];
+}
+
+-(IBAction)dismiss
+{
+    [self removeFromSuperview];
+    
+    // Forward to delegate.
+    [self.delegateViewController decoupledViewDidDismiss:self];
+}
+
 @end
