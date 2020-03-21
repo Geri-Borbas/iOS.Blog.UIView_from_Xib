@@ -1,4 +1,4 @@
-## ![eppz!kit](http://eppz.eu/beacons/eppz!.png) blog.UIView_from_XIB
+## blog.UIView_from_XIB
 
 Sample code for the article [**5 approach to load UIView from Xib** at blog.eppz.eu](http://eppz.eu/blog/uiview-from-xib/).
 
